@@ -1,0 +1,88 @@
+import React from 'react';
+import {Offcanvas,Button,Nav,Container,Col,Row} from 'react-bootstrap';
+import { useState } from 'react';
+
+const Sidebar = () => {
+
+
+const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Launch
+      </Button>
+
+      <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Menu</Offcanvas.Title>
+        </Offcanvas.Header>
+       
+        <Container fluid="md">
+    
+    <Col>
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">Dasboard</Nav.Link>
+            </Nav.Item>
+        </Row>
+
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">My Targets</Nav.Link>
+            </Nav.Item>
+        </Row>
+
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">Attendance</Nav.Link>
+            </Nav.Item>
+        </Row>
+
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">Timetable</Nav.Link>
+            </Nav.Item>
+        </Row>
+    
+
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">Hospitalization</Nav.Link>
+            </Nav.Item>
+        </Row>
+
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">Health Profiles</Nav.Link>
+            </Nav.Item>
+        </Row>
+
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">Fitness Evaluation</Nav.Link>
+            </Nav.Item>
+        </Row>
+
+        <Row>
+            <Nav.Item>
+                <Nav.Link eventKey="link-1">Statistics</Nav.Link>
+            </Nav.Item>
+        </Row>      
+    
+    
+
+  </Col>
+</Container>
+      </Offcanvas>
+    </>
+  );
+
+
+
+}
+
+export default Sidebar
